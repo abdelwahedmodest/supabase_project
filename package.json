@@ -1,0 +1,14 @@
+{
+  "name": "mysupabase",
+  "version": "1.0.0",
+  "description": "create  supabase   project",
+  "main": "test.js",
+  "scripts": {
+    "test": "start  test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4"
+  }
+}
