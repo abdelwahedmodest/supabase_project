@@ -1,5 +1,10 @@
+require('dotenv').config();
 
-const supabase = supabase.createClient('https://bjsmxgyewzksffwbxstc.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqc214Z3lld3prc2Zmd2J4c3RjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU5NjM1MDIsImV4cCI6MjA0MTUzOTUwMn0.5yhDNOXpJLsmM96O4REFZXVzPULHDPgWkVAROxg7rdQ');
+const urlKey = process.env.url_KEY;
+const secretKey = process.env.SECRET_KEY;
+console.log(secretKey); // Access the secret key
+
+const supabase = supabase.createClient(urlKey,secretKey);
 
 async function fetchData() {
   const { data, error } = await supabase
