@@ -1,15 +1,21 @@
 {
   "name": "mysupabase",
   "version": "1.0.0",
-  "description": "create  supabase   project",
+  "description": "Supabase States Data Viewer",
   "main": "test.js",
   "scripts": {
-    "test": "start  test.js"
+    "test": "node test.js",
+    "test:connection": "node test-connection.js",
+    "start": "npx serve",
+    "setup": "bash setup.sh"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
     "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
   }
 }
