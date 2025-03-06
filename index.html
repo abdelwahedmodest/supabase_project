@@ -3,13 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Supabase Fetch Data</title>
+  <title>Supabase States Data Viewer</title>
+  <!-- Load Supabase script first -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <!-- Load external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>States List</h1>
-  <ul id="state-list"></ul>
-  <script   src="test.js"   type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.6"></script>
+  <header>
+    <h1>States Data Viewer</h1>
+    <p class="description">This application fetches state data from a Supabase database and displays it below.</p>
+  </header>
+
+  <div class="container">
+    <ul id="state-list">
+      <li class="loading">Loading states data...</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Powered by <a href="https://supabase.com" target="_blank">Supabase</a></p>
+  </footer>
   
+  <!-- Load application script after Supabase -->
+  <script src="client.js" type="text/javascript"></script>
 </body>
 </html>

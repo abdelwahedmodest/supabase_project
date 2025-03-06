@@ -1,0 +1,93 @@
+/* Styles for Supabase States Data Viewer */
+
+:root {
+  --supabase-green: #3ECF8E;
+  --supabase-dark: #1F1F1F;
+  --light-gray: #f5f5f5;
+  --error-red: #ff0000;
+  --error-bg: #ffdddd;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: var(--supabase-green);
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #666;
+  font-size: 1.1em;
+}
+
+.container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+ul#state-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul#state-list li {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: var(--light-gray);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+ul#state-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+li.error {
+  background-color: var(--error-bg);
+  color: var(--error-red);
+  border-left: 4px solid var(--error-red);
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  ul#state-list li {
+    padding: 10px;
+  }
+}
